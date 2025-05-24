@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+body,
+html {
+  font-family: "Share Tech Mono", monospace;
+  background-color: #646dd3;
+}
+
+/* Larghezza della scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px; /* per scrollbar orizzontale */
+}
+
+/* Colore del binario (track) */
+::-webkit-scrollbar-track {
+  background: #0b3c5f;
+  border-radius: 10px;
+  border: 2px solid #94a0f1; /* bordo per creare "spazio" attorno */
+}
+
+/* Colore del cursore (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #d62828;
+  border-radius: 10px;
+}
+
+/* Al passaggio del mouse */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #b22121;
+}
