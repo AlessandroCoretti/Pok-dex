@@ -1,31 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body,
-html {
-  font-family: "Share Tech Mono", monospace;
-  background-color: #646dd3;
+.Perspective-container {
+  perspective: 1000px;
 }
 
-/* Larghezza della scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 8px; /* per scrollbar orizzontale */
+/* GPU Acceleration Hints */
+.will-change-transform {
+  will-change: transform;
+  transform: translateZ(0);
+  /* Hack to force GPU layer */
+  contain: layout paint style;
+  /* Ultimate Optimization */
 }
 
-/* Colore del binario (track) */
-::-webkit-scrollbar-track {
-  background: #0b3c5f;
-  border-radius: 10px;
-  border: 2px solid #94a0f1; /* bordo per creare "spazio" attorno */
+.will-change-opacity {
+  will-change: opacity;
 }
 
-/* Colore del cursore (thumb) */
-::-webkit-scrollbar-thumb {
-  background-color: #d62828;
-  border-radius: 10px;
-}
-
-/* Al passaggio del mouse */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #b22121;
-}
+/* Scrollbar restored */
